@@ -31,7 +31,7 @@ def find_greatest(numbers):
     
     return max_num
 
-# Example usage:
+
 numbers = [10, 5, 20, 15, 30]
 greatest = find_greatest(numbers)
 print("The greatest number is:", greatest)
