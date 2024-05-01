@@ -1,0 +1,27 @@
+#palindrome numbers is the numbers that can be read or used as the same from every side/angle that can be used 
+for ex:  1234321 is the palindrome number because it can be read same from the left as well as right 
+this palindrome code is used to find out using the recursion fucntion i.e repetition of the block of the code 
+code : 
+
+
+def is_palindrome_recursive(s):
+    if len(s) <= 1:
+        return True
+    elif s[0] != s[-1]:
+        return False
+    else:
+        # Recursively check the substring excluding the first and last characters
+        return is_palindrome_recursive(s[1:-1])
+
+def is_number_palindrome(num):
+    # Convert the number to a string
+    num_str = str(num)
+    # Check if the string representation is a palindrome
+    return is_palindrome_recursive(num_str)
+
+# Example usage:
+num =int(input("enter no: "))
+if is_number_palindrome(num):
+    print(num, "is a palindrome")
+else:
+    print(num, "is not a palindrome")
