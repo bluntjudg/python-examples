@@ -18,6 +18,6 @@ def fibonacci_iterative(n):
     for fib in fib_list:
         print(fib, end=" ")
 
-# Example usage:
-n = 10  # Number of Fibonacci numbers to print
+# Example:
+n = 10  
 fibonacci_iterative(n)
