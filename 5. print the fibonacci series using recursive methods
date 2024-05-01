@@ -1,0 +1,18 @@
+# recursive method is the method that calles the function by itself 
+code :
+
+
+  def fibonacci_recursive(n):
+    if n <= 1:
+        return n
+    else:
+        # Recursive call to calculate Fibonacci numbers
+        return fibonacci_recursive(n - 1) + fibonacci_recursive(n - 2)
+
+def print_fibonacci_series(n):
+    for i in range(n):
+        print(fibonacci_recursive(i), end=" ")
+
+# Example usage:
+n = 10
+print_fibonacci_series(n)
