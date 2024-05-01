@@ -9,7 +9,7 @@ def sum_of_digits_recursive(num):
         # Recursively call the function with the remaining digits
         return last_digit + sum_of_digits_recursive(num // 10)
 
-# Example usage:
+
 num = int(input("enter no: "))
 sum_of_digits = sum_of_digits_recursive(num)
 print("Sum of digits of", num, "is:", sum_of_digits)
