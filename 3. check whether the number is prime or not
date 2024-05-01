@@ -1,0 +1,21 @@
+# this is the code for numbers from the input users to find the prime number or not 
+
+
+
+def is_prime(num):
+    if num <= 1:
+        return False
+    
+    # Check for divisibility from 2 to num-1
+    for i in range(2, num):
+        if num % i == 0:
+            return False
+    
+    return True
+
+# Example usage:
+num =int(input("enter no: "))
+if is_prime(num):
+    print(num, "is a prime number")
+else:
+    print(num, "is not a prime number")
