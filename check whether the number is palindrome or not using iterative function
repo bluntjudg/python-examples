@@ -1,0 +1,41 @@
+# this is the same palindrome method but using iterative method 
+
+
+code :  1. complex method
+def is_number_palindrome(num):
+    # Convert the number to a string
+    num_str = str(num)
+    # Initialize pointers for the start and end of the string
+    start = 0
+    end = len(num_str) - 1
+    # Iterate until the pointers meet
+    while start < end:
+        # Compare digits at the start and end positions
+        if num_str[start] != num_str[end]:
+            return False
+        # Move the pointers towards the center
+        start += 1
+        end -= 1
+    return True
+
+# Example usage:
+num = 12321
+if is_number_palindrome(num):
+    print(num, "is a palindrome")
+else:
+    print(num, "is not a palindrome")
+
+
+2. easy method 
+def is_number_palindrome(num):
+    # Convert the number to a string
+    num_str = str(num)
+    # Check if the string is equal to its reverse
+    return num_str == num_str[::-1]
+
+# Example usage:
+num = 12321
+if is_number_palindrome(num):
+    print(num, "is a palindrome")
+else:
+    print(num, "is not a palindrome")
