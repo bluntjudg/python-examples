@@ -1,0 +1,16 @@
+Reversing the integers
+code : 
+def reverse_integer(num):
+    # Convert the integer to a string and reverse it
+    reversed_str = str(num)[::-1]
+    
+    # Convert the reversed string back to an integer
+    reversed_num = int(reversed_str)
+    
+    return reversed_num
+
+# Example usage:
+num = 12345
+reversed_num = reverse_integer(num)
+print("Original number:", num)
+print("Reversed number:", reversed_num)
