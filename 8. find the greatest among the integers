@@ -1,0 +1,39 @@
+# there are 2 ways to find out the greatest among the integers 
+1. in-built function called max()
+2. using conditions 
+
+
+code :
+1. using max function in-built 
+
+# Define a list of integers
+integers = [10, 5, 8, 20, 15]
+
+# Find the greatest integer using the max() function
+greatest_integer = max(integers)
+
+# Print the result
+print("The greatest integer is:", greatest_integer)
+
+
+2. conditional code iteration method 
+
+def find_greatest(numbers):
+    if not numbers:
+        return None  # Return None if the list is empty
+    
+    max_num = numbers[0]  # Initialize max_num with the first element
+    
+    # Iterate through the list starting from the second element
+    for num in numbers[1:]:
+        if num > max_num:
+            max_num = num  # Update max_num if a greater number is found
+    
+    return max_num
+
+# Example usage:
+numbers = [10, 5, 20, 15, 30]
+greatest = find_greatest(numbers)
+print("The greatest number is:", greatest)
+
+
