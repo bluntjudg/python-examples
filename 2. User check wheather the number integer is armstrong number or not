@@ -1,0 +1,26 @@
+explaination :how to find armstrong number is the lenght of the number should be the power of the each digit of the number, the output after adding the numbers after powering the lenght of the number should be same as the number provided.
+for ex :
+         153 is the armstrong number 
+          (1)3 + (5)3 + (3)3 = 1 + 125 + 9 = 153
+          this is known as armstrong number
+
+
+code :
+
+      def is_armstrong_number(num):
+    # Count the number of digits
+    num_str = str(num)
+    num_digits = len(num_str)
+    
+    #this line shows the length powered to the number of digits in the number 
+    sum_of_digits = sum(int(digit) ** num_digits for digit in num_str)
+    
+    # Check if the sum is equal to the original number
+    return sum_of_digits == num
+
+# Example:
+num = 153
+if is_armstrong_number(num):
+    print(num, "is an Armstrong number")
+else:
+    print(num, "is not an Armstrong number")
